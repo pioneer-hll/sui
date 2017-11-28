@@ -1,0 +1,114 @@
+html:not(.watch-active-state) label.label-checkbox:active{
+    background-color: none;
+}
+.carts .bar{
+    background-color: #329364;
+}
+.carts .title{
+    color: #fff;
+}
+.carts .bar a{
+    color:#fff;
+    font-weight: normal;
+    display: block;
+
+}
+.carts .bar a .iconfont{
+    font-size: 1.5rem;
+    line-height: 1.2rem;
+    font-weight: normal;
+}
+
+.carts .bar #icon-12{
+    line-height:1.4rem;
+}
+
+/*ÄÚÈÝ*/
+.carts .list-block{
+    margin: 0;
+}
+.carts .list-first{
+    margin-top:0.475rem;
+}
+.carts .list-block{
+    margin-bottom: 0.6rem;
+    background-color: #f1f1f1;
+
+}
+.carts .label-checkbox div.item-media img{
+    margin-left: 14px;
+}
+.carts .item-media{
+    overflow: hidden;
+}
+.carts .item-title-row{
+    margin-top:0.7rem;
+}
+.carts .item-inner .item-subtitle{
+    margin-bottom: 1rem;
+}
+.carts .item-inner .item-text span{
+    color: red;
+}
+.carts .count span:first-child{
+    display: inline-block;
+    width:2.125rem;
+    height: 1.25rem;
+    border: 1px solid #000;
+    border-radius: 2px;
+    text-align: center;
+    line-height:1.25rem;
+
+}
+.carts .count span:last-child{
+
+    vertical-align: middle;
+}
+.carts .bar.bar-tab{
+    background-color: #464646;
+    z-index: 1000;
+    color: #fff;
+
+}
+.carts .bar.bar-tab .nav_container{
+    width: 92%;
+    margin: 0 auto;
+    height: 100%;
+}
+.carts .bar.bar-tab  .nav_container .label-checkbox span{
+    margin-left:0.4rem;
+}
+.carts .bar.bar-tab .total{
+
+    margin-left:2.5rem;
+}
+.carts .bar.bar-tab .total span:nth-child(2){
+     margin-left: 2px;
+    color: red;
+}
+
+.carts .bar.bar-tab .total span:nth-child(3){
+    display: inline-block;
+    font-size:30px;
+    color: red;
+}
+label.label-checkbox i.icon-form-checkbox{
+    margin-top: -6px;
+}
+.carts .bar.bar-tab .item-media{
+    display: inline-block;
+    vertical-align: middle;
+}
+.carts .bar.bar-tab .total{
+    display: inline-block;
+}
+
+.carts .bar.bar-tab .account button{
+    outline: none;
+    border:none;
+    height:35px;
+    border: 1px solid #329465;
+    border-radius: 5px;
+    background-color: #329465;
+    margin-top:13% ;
+}

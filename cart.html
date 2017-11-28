@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 引用SUI的CSS-->
+    <link rel="stylesheet" href="lib/sui/css/sm.min.css">
+    <link rel="stylesheet" href="lib/sui/css/sm-extend.min.css">
+    <!-- 引用项目用的字体图标库-->
+    <link rel="stylesheet" href="font/iconfont.css"/>
+    <link rel="stylesheet" href="css/cart.css"/>
+    <link rel="stylesheet" href="font/font_right/iconfont.css"/>
+
+</head>
+<body>
+<div class="page-group">
+    <div class="page page-current carts">
+        <!-- 标题栏 -->
+        <header class="bar bar-nav">
+            <a class="icon pull-left back">
+                <i class="iconfont icon-fanhui" id="icon-12"></i>
+            </a>
+
+            <h1 class="title">购物车</h1>
+            <a class="icon pull-right" id="delete">
+                <i class="iconfont icon-shanchu"></i>
+            </a>
+        </header>
+
+        <div class="content">
+            <div class="c_cart">
+                <div class="list-block media-list list-first">
+                    <ul>
+                        <li id="pp">
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="my-radio" id="input1">
+                                <div class="item-media"><i class="icon icon-form-checkbox"></i> <img src="images/sort-1.png" style='width: 4rem;'></div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">开心果自然开口</div>
+
+                                    </div>
+                                    <div class="count pull-right">
+                                        <span>1</span>
+                                        <span> <i class="iconfont icon-jiantouyou"></i></span>
+                                    </div>
+                                    <div class="item-subtitle">简单文字说明……</div>
+
+                                    <div class="item-text">总价：<span>&yen;</span><span>10.0</span>
+
+                                    </div>
+
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="list-block media-list list-first">
+                    <ul>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="my-radio">
+                                <div class="item-media"><i class="icon icon-form-checkbox"></i> <img src="images/sort-1.png" style='width: 4rem;'></div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">开心果自然开口</div>
+
+                                    </div>
+                                    <div class="count pull-right">
+                                        <span>1</span>
+                                        <span> <i class="iconfont icon-jiantouyou"></i></span>
+                                    </div>
+                                    <div class="item-subtitle">简单文字说明……</div>
+
+                                    <div class="item-text">总价：<span>&yen;</span><span>13.0</span>
+
+                                    </div>
+
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="list-block media-list list-first">
+                    <ul>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="my-radio">
+                                <div class="item-media"><i class="icon icon-form-checkbox"></i> <img src="images/sort-1.png" style='width: 4rem;'></div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">开心果自然开口</div>
+
+                                    </div>
+                                    <div class="count pull-right">
+                                        <span>1</span>
+                                        <span> <i class="iconfont icon-jiantouyou"></i></span>
+                                    </div>
+                                    <div class="item-subtitle">简单文字说明……</div>
+
+                                    <div class="item-text">总价：<span>&yen;</span><span>16.0</span>
+
+                                    </div>
+
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      <!--  底部导航-->
+        <nav class="bar bar-tab">
+            <div class="nav_container">
+                <label class="label-checkbox item-content">
+                    <input type="checkbox" name="my-radio">
+                    <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                    <span>全选</span>
+
+
+                </label>
+                <div class="total">
+                    <span>合计</span>
+                    <span>&yen;</span>
+                    <span>0</span>
+                </div>
+                <div class="account pull-right">
+                    <button>去结算</button>
+                </div>
+            </div>
+
+        </nav>
+
+    </div>
+ </div>
+    <!--引入zepto核心组件-->
+    <script type='text/javascript' src='lib/sui/js/zepto.min.js' charset='utf-8'></script>
+    <!--引入zepto触摸事件组件-->
+    <script type='text/javascript' src='lib/sui/js/touch.js' charset='utf-8'></script>
+    <!--引入SUI的JS文件-->
+    <script type='text/javascript' src='lib/sui/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='lib/sui/js/sm-extend.min.js' charset='utf-8'></script>
+
+    <!--应用公共js库-->
+    <script type='text/javascript' src='js/common.js' charset='utf-8'></script>
+
+    <script src="js/swipe.js"></script>
+
+    <!--SUI页面初始化-->
+    <script>
+        $.init();
+        $.config = {router: false};
+        $(document).on("pageAnimationEnd", ".page", function () {
+            location.reload();
+        })
+    </script>
+
+
+    <script>
+        /*全选*/
+        $(".bar .nav_container .label-checkbox").click(function(){
+               var selectAll=0;
+              var t=$(".bar .nav_container input").prop("checked");
+
+               if(!t){
+                   $(".c_cart .list-block").addClass("active");
+                   var prices=document.querySelectorAll(".c_cart .active .item-inner .item-text span:last-child");
+
+                   for(var i=0;i<prices.length;i++){
+                       selectAll+=parseFloat(prices[i].innerHTML);
+                   }
+                   $(".total span:nth-child(3)").text(selectAll);
+               }else{
+                   $(".c_cart .list-block").removeClass("active");
+                   $(".total span:nth-child(3)").text(0);
+               }
+            $(".c_cart .list-block").find("label.label-checkbox input[type=checkbox]").prop("checked",!t);
+
+          });
+
+        /*   单个*/
+        var sum=0;
+       var click_flag=true;        /*阀门*/
+        $(".c_cart .list-block").click(function(){
+
+            if(click_flag){
+                click_flag=false;
+                /*价格获取*/
+                sum=parseInt($(".total span:nth-child(3)").text());
+                var price=parseInt($(this).find(".item-inner .item-text span:last-child").html());
+                var flag=$(this).find("label.label-checkbox input[type=checkbox]").prop("checked");
+                console.log(!flag);
+                if(!flag){
+                    $(this).addClass("active");
+                    sum+=price;
+
+                }else{
+                    $(this).removeClass("active");
+                    sum-=price
+                }
+                console.log(price);
+                console.log("总价："+sum);
+                /*总价价格*/
+                $(".total span:nth-child(3)").text(sum);
+
+                var li_length=$(".c_cart .list-block").length;
+                var actives= $(".c_cart").find(".active").size();
+                if(li_length==actives){
+                    $(".bar .nav_container label.label-checkbox input[type=checkbox]").prop("checked",true);
+
+                }else{
+                    $(".bar .nav_container label.label-checkbox input[type=checkbox]").prop("checked",false);
+
+                }
+                click_flag=true;
+            }
+
+
+
+
+
+
+        });
+        /*求总和函数*/
+        function sunPrice(){
+            sum=$(".total span:nth-child(3)").text();
+            var prices=document.querySelectorAll(".c_cart .active .item-inner .item-text span:last-child");
+
+            for(var i=0;i<prices.length;i++){
+                sum-=parseFloat(prices[i].innerHTML);
+            }
+            $(".total span:nth-child(3)").text(sum);
+        }
+        //删除
+        $("#delete").click(function(){
+            /*总价处理*/
+            sunPrice();
+            /*DOM删除*/
+            $(".c_cart .active").remove();
+            if($(".c_cart .active").size()==0){
+
+                $(".bar .nav_container input").prop("checked",false);
+                $(".bar .nav_container input").prop("disabled",true);
+            }
+
+
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 引用SUI的CSS-->
+    <link rel="stylesheet" href="lib/sui/css/sm.min.css">
+    <link rel="stylesheet" href="lib/sui/css/sm-extend.min.css">
+    <!-- 引用项目用的字体图标库-->
+    <link rel="stylesheet" href="font/iconfont.css"/>
+    <link rel="stylesheet" href="css/sort.css"/>
+</head>
+<body>
+
+<div class="page-group">
+    <div class="page page-current" id="detail">
+        <!-- 标题栏 -->
+        <header class="bar bar-nav details">
+            <a class="icon pull-left back icon_back">
+                <i class="iconfont icon-fanhui"></i>
+            </a>
+
+            <h1 class="title">详情</h1>
+            <a class="icon pull-right" href="javascript:;" >
+                <i class="iconfont icon-gengduo" id="many"></i>
+            </a>
+        </header>
+
+        <div class="content details">
+            <div class="img">
+
+            </div>
+            <div class="c_detail">
+                <div class="c_title"></div>
+                <div class="c_price">&yen;<span></span></div>
+            </div>
+            <div class="shop_message">
+                <a class="icon pull-left">
+                    <i class="iconfont icon-tuxiang"></i>
+                </a>
+                <span>商品信息</span>
+
+                <div class="message_info">
+                    <p>规格：<span></span></p>
+
+                    <p>产地：<span></span></p>
+
+                    <p>商品编码：<span></span></p>
+
+                    <p>商品介绍：<span></span></p>
+                </div>
+            </div>
+
+        </div>
+        <nav class="bar bar-tab">
+            <div id="option">
+                  <span class="o_span" id="reduce">
+                      <a class="icon pull-right">
+                          <i class="iconfont icon-jianhao" ></i>
+                      </a>
+                  </span>
+                <span id="input">1</span>
+                <span class="o_span" id="add">
+                    <a class="icon pull-right">
+                        <i class="iconfont icon-jiahao"></i>
+                    </a>
+                </span>
+                <div class="detail"> <button>购物车</button></div>
+            </div>
+
+        </nav>
+        <div class="mask">
+            <div class="mask_box">
+                <div class="mask_content">
+
+                    <div class="text_1">
+                        <i class="iconfont icon-pinglun"> 评论</i>
+                    </div>
+
+                    <div class="text_2">
+                        <i class="iconfont icon-shoucang"> 收藏</i>
+                    </div>
+
+                    <div class="text_3">
+                        <i class="iconfont icon-fenxiang"> 分享</i>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!--引入zepto核心组件-->
+<script type='text/javascript' src='lib/sui/js/zepto.min.js' charset='utf-8'></script>
+<!--引入zepto触摸事件组件-->
+<script type='text/javascript' src='lib/sui/js/touch.js' charset='utf-8'></script>
+<!--引入SUI的JS文件-->
+<script type='text/javascript' src='lib/sui/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='lib/sui/js/sm-extend.min.js' charset='utf-8'></script>
+<!--SUI页面初始化-->
+
+<script>
+
+
+   $(document).on("pageAnimationEnd",".page",function(){
+        location.reload();
+    })
+</script>
+<script>
+    t= $("#input").html();
+    $("#reduce").click(function(){
+
+        t--;
+        if(t<0){
+            t=1;
+        }
+        $("#input").html(t);
+    });
+    $("#add").click(function(){
+        t++;
+        $("#input").html(t);
+    });
+   $("#many").click(function(){
+
+       $(".page-group #detail .mask").css({"display":"block"});
+
+   });
+   $(".mask").click(function(){
+       $(this).css({"display":"none"});
+   });
+   $(".text_1").click(function(){
+       $.router.load("comment.html");
+   });
+
+   /* 动态添加数据*/
+    var storage=window.localStorage;
+    var obj=JSON.parse(storage.getItem("obj"));
+   // var obj=storage.getItem("obj");
+
+   // console.log(typeof data);
+    /*   for(var i=0;i<data.length;i++){
+           if(currId==data[i]["id"]){
+              obj=data[i];
+           }
+
+       }*/
+    //console.log(obj);
+
+    $(".c_detail .c_title").text(obj.title);
+    $(".c_detail .c_price span").text(obj.price.toFixed(1));
+    $(".message_info p:nth-child(1) span").text(obj.message.standard);
+
+    $(".message_info p:nth-child(2) span").text(obj.message.place);
+    $(".message_info p:nth-child(3) span").text(obj.message.code);
+    $(".message_info p:nth-child(4) span").text(obj.introduce);
+
+</script>
+
+<script>
+    $(document).on("pageAnimationEnd",".page",function(){
+        location.reload();
+    })
+</script>
+<script>
+    $.init();
+</script>
+</body>
+</html>

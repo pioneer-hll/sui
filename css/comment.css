@@ -1,0 +1,27 @@
+.comment.bar{
+    background-color: #329364;
+
+}
+.comment.bar .icon .icon-fanhui{
+    color: #fff;
+    font-size: 1.7rem;
+}
+.comment.bar .title{
+    color: #fff;
+    font-family: "Microsoft Yahei", "sans-serif";
+  font-weight: normal;
+}
+.comment .message{
+    border-bottom: 1px solid #ccc;
+    text-indent: 0.9rem;
+}
+.comment .m_title{
+    margin-top: 1rem;
+    overflow: hidden;
+}
+.comment .message .date{
+    color: #ccc;
+}
+.comment .message .m_main{
+    margin: 0.75rem 0;
+}
